@@ -87,9 +87,9 @@ public class cucumberJava {
     @When("^I enter Usuario as \"([^\"]*)\" and Contrasena as \"([^\"]*)\"$")
     public void I_enter_Usuario_as_and_Contrasena_as(String arg1, String arg2) throws AWTException {
 
-        driver.findElement(By.id("usuario")).sendKeys(arg1);
+        driver.findElement(By.name("usuario")).sendKeys(arg1);
 
-        driver.findElement(By.id("contrasena")).sendKeys(arg2);
+        driver.findElement(By.name("contrasena")).sendKeys(arg2);
 
         //WebElement elemento = driver.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]"));
 
@@ -101,7 +101,7 @@ public class cucumberJava {
         //driver.findElement(By.xpath("//button[contains(text(),'Iniciar Sesión')]")).click();
         //driver.findElement(By.xpath("//button")).click();
 
-        driver.findElement(By.id("boton1")).click();
+        driver.findElement(By.name("boton1")).click();
         //driver.findElement(By.name("Aceptar")).click();
 
         // getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
@@ -135,17 +135,17 @@ public class cucumberJava {
     public void loginshouldbeunsuccessful() {
         //WebElement texto = driver.findElement(By.className("UIAAlert"));
 
-        WebElement texto = driver.findElement(By.id("credenciales"));
+        WebElement texto = driver.findElement(By.name("credenciales"));
         boolean display = texto.isDisplayed();
 
         //String texto2 = texto.getAttribute("p");
         //System.out.print(texto2);
 
-        //assertTrue(isElementPresent(By.id("credenciales")));
+        //assertTrue(isElementPresent(By.name("credenciales")));
 
         //Assert.assertTrue("Correcto", display.("Credenciales incorrectas"));
 
-        Assert.assertTrue(isElementPresent(By.id("credenciales")));
+        Assert.assertTrue(isElementPresent(By.name("credenciales")));
 
 
         try {
@@ -180,7 +180,7 @@ public class cucumberJava {
 
         //Assert.assertTrue(isElementPresent(By.id("operacion")));
         //WebElement operacion = driver.findElement(By.id("operacion"));
-        Assert.assertFalse(isElementPresent(By.id("credenciales")));
+        Assert.assertFalse(isElementPresent(By.name("credenciales")));
 
         try {
             Thread.sleep(5000);
