@@ -53,7 +53,7 @@ public class cucumberJava {
         //desiredCapabilities.setCapability("automationName","UIautomation");
         //requiredcapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.iOS);
         //requiredcapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Ipad Air2 Device");
-        capabilities.setCapability("app","/Users/appium/Documents/Iberbank.app");
+        capabilities.setCapability("app","/Users/appium/Documents/Iberbank.ipa");
         //capabilities.setCapability("realDeviceLogger","/usr/local/lib/node_modules/deviceconsole/deviceconsole");
         //capabilities.setCapability("platformName","Android");
         //capabilities.setCapability("deviceName","Xperia M2");
